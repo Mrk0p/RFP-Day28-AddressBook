@@ -1,11 +1,18 @@
 package com.bridgelabz.address_book;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class AddressBookMain {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         HashMap<String,AddressBook> dictionary = new HashMap<>();
         AddressBook book = new AddressBook();
         Scanner input = new Scanner(System.in);
@@ -140,7 +147,21 @@ public class AddressBookMain {
                 case 10 :
                     System.out.println("Exiting from dictionary");
                     break;
+
             }
         }while (option != 10);
+
+        Path path = Paths.get("D:\\RFP Day 27 Assignment\\Day 27 assignment\\src\\main\\java\\com\\bridgelabz\\address_book.txt");
+        try {
+            Files.deleteIfExists(path);
+            Files.write(path, dictionary.keySet().stream().map(key -> dictionary.get(key).toString()).collect(Collectors.toList()),
+                    StandardOpenOption.CREATE);
+
+            List<String> readAllLines = Files.readAllLines(path);
+            readAllLines.stream().forEach(line -> System.out.println(line));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

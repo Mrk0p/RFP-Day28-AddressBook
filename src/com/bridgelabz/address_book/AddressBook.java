@@ -31,7 +31,6 @@ public class AddressBook {
     }
 
 
-
     public void editPersonDetails(){
         Scanner input1 = new Scanner(System.in);
         System.out.println("Enter name to edit : " ) ;

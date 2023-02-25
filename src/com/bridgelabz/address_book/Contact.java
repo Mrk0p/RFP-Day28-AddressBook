@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class Contact {
 
-
     private String firstName;
     private String lastName;
     private String address;
@@ -142,7 +141,7 @@ public class Contact {
 
     public int compareTo(Object o) {
         Contact contact = (Contact) o;
-        int compareResult = this.firstName.compareTo(contact.firstName);
+        int compareResult = this.city.compareTo(contact.city);
         return compareResult;
     }
 }
