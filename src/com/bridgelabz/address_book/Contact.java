@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Contact {
 
+
     private String firstName ;
     private String lastName;
     private String address;
@@ -110,6 +111,7 @@ public class Contact {
         System.out.print("Enter Email ID : ");
         email = input.next();
     }
+    @Override
     public String toString() {
         return "Contact{" +
                 "firstName='" + firstName + '\'' +
