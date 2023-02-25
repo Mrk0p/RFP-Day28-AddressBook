@@ -90,6 +90,7 @@ public class Contact {
         this.phoneNumber = phoneNumber;
         this.email = email;
     }
+
     public void getPersonDetails(){
 
         Scanner input = new Scanner(System.in);
