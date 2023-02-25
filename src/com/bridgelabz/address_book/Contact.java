@@ -109,6 +109,7 @@ public class Contact {
         phoneNumber = input.nextLong();
         System.out.print("Enter Email ID : ");
         email = input.next();
+
     }
 }
 
