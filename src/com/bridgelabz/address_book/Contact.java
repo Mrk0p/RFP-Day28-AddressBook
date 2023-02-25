@@ -90,7 +90,6 @@ public class Contact {
         this.phoneNumber = phoneNumber;
         this.email = email;
     }
-
     public void getPersonDetails(){
 
         Scanner input = new Scanner(System.in);
@@ -110,7 +109,6 @@ public class Contact {
         phoneNumber = input.nextLong();
         System.out.print("Enter Email ID : ");
         email = input.next();
-
     }
 }
 
